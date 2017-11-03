@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>函数在其他文件里面调用 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="最佳解决方案  你可以这样做：1234module.exports = &amp;#123;    method: function() &amp;#123;&amp;#125;,    otherMethod: function() &amp;#123;&amp;#125;&amp;#125; 甚至只是：12exports.method = function() &amp;#123;&amp;#125;;exports.otherMethod = func">
+<meta property="og:type" content="article">
+<meta property="og:title" content="函数在其他文件里面调用">
+<meta property="og:url" content="http://yoursite.com/2017/11/03/函数在其他文件里面调用/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="最佳解决方案  你可以这样做：1234module.exports = &amp;#123;    method: function() &amp;#123;&amp;#125;,    otherMethod: function() &amp;#123;&amp;#125;&amp;#125; 甚至只是：12exports.method = function() &amp;#123;&amp;#125;;exports.otherMethod = func">
+<meta property="og:updated_time" content="2017-11-03T01:21:16.876Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="函数在其他文件里面调用">
+<meta name="twitter:description" content="最佳解决方案  你可以这样做：1234module.exports = &amp;#123;    method: function() &amp;#123;&amp;#125;,    otherMethod: function() &amp;#123;&amp;#125;&amp;#125; 甚至只是：12exports.method = function() &amp;#123;&amp;#125;;exports.otherMethod = func">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-函数在其他文件里面调用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/03/函数在其他文件里面调用/" class="article-date">
+  <time datetime="2017-11-03T01:15:36.127Z" itemprop="datePublished">2017-11-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      函数在其他文件里面调用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>最佳解决方案</li>
+</ol>
+<p>你可以这样做：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    method: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;,</div><div class="line">    otherMethod: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>甚至只是：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">exports.method = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</div><div class="line">exports.otherMethod = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</div></pre></td></tr></table></figure></p>
+<ol>
+<li>次佳解决方案</li>
+</ol>
+<p>要导出多个函数，您可以像这样列出它们：(个人推荐使用这样，易懂)<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">    function1,</div><div class="line">    function2,</div><div class="line">    function3</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后在另一个文件中访问它们：(个人更喜欢这种)<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myFunctions = <span class="built_in">require</span>(<span class="string">"./lib/file.js"</span>)</div><div class="line"><span class="comment">//然后可以通过调用以下命令调用每个函数：</span></div><div class="line">myFunctions.function1</div><div class="line">myFunctions.function2</div><div class="line">myFunctions.function3</div></pre></td></tr></table></figure></p>
+<ol>
+<li>第三种解决方案</li>
+</ol>
+<p>这只是为了我的参考，因为我想要实现的是可以实现的。<br>在module.js<br>我们可以做这样的事情<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span> (<span class="params"> firstArg, secondArg </span>) </span>&#123;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">firstFunction</span> (<span class="params"> </span>) </span>&#123; ... &#125;</div><div class="line"><span class="function"><span class="keyword">function</span>  <span class="title">secondFunction</span> (<span class="params"> </span>) </span>&#123; ... &#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">thirdFunction</span> (<span class="params"> </span>) </span>&#123; ... &#125;</div><div class="line"><span class="keyword">return</span> &#123; <span class="attr">firstFunction</span>: firstFunction, <span class="attr">secondFunction</span>: secondFunction,</div><div class="line">thirdFunction: thirdFunction &#125;;</div><div class="line">&#125;</div><div class="line"><span class="comment">//在main.js</span></div><div class="line"><span class="keyword">var</span> name = <span class="built_in">require</span>(<span class="string">'module'</span>)(firstArg, secondArg);</div></pre></td></tr></table></figure></p>
+<ol>
+<li>第四种方案</li>
+</ol>
+<p>您可以编写一个在其他功能之间手动委托的功能：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="keyword">function</span>(<span class="params">arg</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>(arg <span class="keyword">instanceof</span> <span class="built_in">String</span>) &#123;</div><div class="line">        <span class="keyword">return</span> doStringThing.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</div><div class="line">    &#125;<span class="keyword">else</span>&#123;</div><div class="line">        <span class="keyword">return</span> doObjectThing.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</div><div class="line">    &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/03/函数在其他文件里面调用/" data-id="cj9jmlrr80000b4qsndlra0de" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/03/数组降维/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          数组降维
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/03/hexo+github搭blog/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo+github搭轻量级blog</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/03/用码云挂载页面/">用码云挂载页面</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/03/js高阶函数/">map,filter.reduce的区别</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/03/js的number的数据处理/">js的number的数据处理（取位）</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/03/常见的排序方法/">常见的排序方法</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/03/数组降维/">数组降维</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

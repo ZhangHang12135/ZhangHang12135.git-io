@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>常见的排序方法 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一.冒泡排序 比较相邻的元素。如果第一个比第二个大，就交换他们两个。 对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。在这一点，最后的元素应该会是最大的数。 针对所有的元素重复以上的步骤，除了最后一个。 持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。  冒泡排序的动画演示代码实现12345678910111213141516function bubbleSort">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常见的排序方法">
+<meta property="og:url" content="http://yoursite.com/2017/11/03/常见的排序方法/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一.冒泡排序 比较相邻的元素。如果第一个比第二个大，就交换他们两个。 对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。在这一点，最后的元素应该会是最大的数。 针对所有的元素重复以上的步骤，除了最后一个。 持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。  冒泡排序的动画演示代码实现12345678910111213141516function bubbleSort">
+<meta property="og:image" content="http://bubkoo.qiniudn.com/Bubble_sort_animation.gif">
+<meta property="og:image" content="http://bubkoo.qiniudn.com/selection_sort_animation.gif">
+<meta property="og:image" content="http://bubkoo.qiniudn.com/Selection-Sort-Animation.gif">
+<meta property="og:updated_time" content="2017-11-03T03:41:33.663Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="常见的排序方法">
+<meta name="twitter:description" content="一.冒泡排序 比较相邻的元素。如果第一个比第二个大，就交换他们两个。 对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。在这一点，最后的元素应该会是最大的数。 针对所有的元素重复以上的步骤，除了最后一个。 持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。  冒泡排序的动画演示代码实现12345678910111213141516function bubbleSort">
+<meta name="twitter:image" content="http://bubkoo.qiniudn.com/Bubble_sort_animation.gif">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-常见的排序方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/03/常见的排序方法/" class="article-date">
+  <time datetime="2017-11-03T01:44:28.214Z" itemprop="datePublished">2017-11-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      常见的排序方法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一-冒泡排序"><a href="#一-冒泡排序" class="headerlink" title="一.冒泡排序"></a>一.冒泡排序</h2><ol>
+<li>比较相邻的元素。如果第一个比第二个大，就交换他们两个。</li>
+<li>对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。在这一点，最后的元素应该会是最大的数。</li>
+<li>针对所有的元素重复以上的步骤，除了最后一个。</li>
+<li>持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。</li>
+</ol>
+<p>冒泡排序的动画演示<br><img src="http://bubkoo.qiniudn.com/Bubble_sort_animation.gif" alt="来自维基百科"><br>代码实现<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">bubbleSort</span>(<span class="params">array</span>) </span>&#123;</div><div class="line">   <span class="keyword">var</span> length = array.length,</div><div class="line">       i,</div><div class="line">       j,</div><div class="line">       temp;</div><div class="line">   <span class="keyword">for</span> (i = length - <span class="number">1</span>; <span class="number">0</span> &lt; i; i--) &#123;</div><div class="line">       <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; i; j++) &#123;</div><div class="line">           <span class="keyword">if</span> (array[j] &gt; array[j + <span class="number">1</span>]) &#123;</div><div class="line">               temp = array[j];</div><div class="line">               array[j] = array[j + <span class="number">1</span>];</div><div class="line">               array[j + <span class="number">1</span>] = temp;</div><div class="line">           &#125;</div><div class="line">       &#125;</div><div class="line">   &#125;</div><div class="line">   <span class="keyword">return</span> array;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h2 id="二-选择排序"><a href="#二-选择排序" class="headerlink" title="二.选择排序"></a>二.选择排序</h2><ol>
+<li>假设第一个是最大（或者最小）的，然后跟其他数比较，比他大（小）的就换位置</li>
+<li>每一次遍历只找出当前最大（小）的<br>总之，选择排序（Selection Sort）是一种简单直观的排序算法。它的工作原理如下，<br>首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置，然后，再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。以此类推，直到所有元素均排序完毕。</li>
+</ol>
+<p>选择排序图示<br><img src="http://bubkoo.qiniudn.com/selection_sort_animation.gif" alt="来自维基百科"><br><img src="http://bubkoo.qiniudn.com/Selection-Sort-Animation.gif" alt=""><br>代码实现<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">selectionSort</span>(<span class="params">array</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> length = array.length,</div><div class="line">      i,</div><div class="line">      j,</div><div class="line">      minIndex,</div><div class="line">      minValue,</div><div class="line">      temp;</div><div class="line">  <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; length - <span class="number">1</span>; i++) &#123;</div><div class="line">    minIndex = i;</div><div class="line">    minValue = array[minIndex];</div><div class="line">    <span class="keyword">for</span> (j = i + <span class="number">1</span>; j &lt; length; j++) &#123;</div><div class="line">      <span class="keyword">if</span> (array[j] &lt; minValue) &#123;</div><div class="line">        minIndex = j;</div><div class="line">        minValue = array[minIndex];</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">// 交换位置</span></div><div class="line">    temp = array[i];</div><div class="line">    array[i] = minValue;</div><div class="line">    array[minIndex] = temp;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> array</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>选择排序和冒泡排序很容易弄混，ps:选择排序需要记住下标，冒泡排序不需要</p>
+<h2 id="三-其他排序"><a href="#三-其他排序" class="headerlink" title="三.其他排序"></a>三.其他排序</h2><p>去看这位大佬的博客，等以后看懂了在cv过来（^..^）</p>
+<ol>
+<li><a href="http://bubkoo.com/2014/01/12/sort-algorithm/quick-sort/" target="_blank" rel="external">快速排序</a></li>
+<li><a href="http://bubkoo.com/2014/01/14/sort-algorithm/heap-sort/" target="_blank" rel="external">堆排序</a></li>
+<li><a href="http://bubkoo.com/2014/01/14/sort-algorithm/insertion-sort/" target="_blank" rel="external">插入排序</a></li>
+<li><a href="http://bubkoo.com/2014/01/15/sort-algorithm/shell-sort/" target="_blank" rel="external">希尔排序</a></li>
+<li><a href="http://bubkoo.com/2014/01/15/sort-algorithm/merge-sort/" target="_blank" rel="external">归并排序</a></li>
+<li><a href="http://bubkoo.com/2014/01/15/sort-algorithm/shaker-sort/" target="_blank" rel="external">鸡尾酒排序(冒泡的变形)</a></li>
+<li><a href="http://bubkoo.com/2014/01/15/sort-algorithm/bogo-sort/" target="_blank" rel="external">猴子排序(看运气的排序)</a></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/03/常见的排序方法/" data-id="cj9jmlrri0003b4qspai8n0qb" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/03/js的number的数据处理/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          js的number的数据处理（取位）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/03/数组降维/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">数组降维</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/03/用码云挂载页面/">用码云挂载页面</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/03/js高阶函数/">map,filter.reduce的区别</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/03/js的number的数据处理/">js的number的数据处理（取位）</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/03/常见的排序方法/">常见的排序方法</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/03/数组降维/">数组降维</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>js的number的数据处理（取位） | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一.取整123456789101112//toFixed() 方法可把 Number 四舍五入为指定小数位数的数字NumberObject.toFixed(num)//num必需。规定小数的位数，是 0 ~ 20 之间的值，包括 0 和 20，有些实现可以支持更大的数值范围。如果省略了该参数，将用 0 代替。(14.24).toFixed(1)//14.2,14.24.toFixed(1)也是可以">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js的number的数据处理（取位）">
+<meta property="og:url" content="http://yoursite.com/2017/11/03/js的number的数据处理/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一.取整123456789101112//toFixed() 方法可把 Number 四舍五入为指定小数位数的数字NumberObject.toFixed(num)//num必需。规定小数的位数，是 0 ~ 20 之间的值，包括 0 和 20，有些实现可以支持更大的数值范围。如果省略了该参数，将用 0 代替。(14.24).toFixed(1)//14.2,14.24.toFixed(1)也是可以">
+<meta property="og:updated_time" content="2017-11-03T03:41:34.731Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js的number的数据处理（取位）">
+<meta name="twitter:description" content="一.取整123456789101112//toFixed() 方法可把 Number 四舍五入为指定小数位数的数字NumberObject.toFixed(num)//num必需。规定小数的位数，是 0 ~ 20 之间的值，包括 0 和 20，有些实现可以支持更大的数值范围。如果省略了该参数，将用 0 代替。(14.24).toFixed(1)//14.2,14.24.toFixed(1)也是可以">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-js的number的数据处理" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/03/js的number的数据处理/" class="article-date">
+  <time datetime="2017-11-03T02:06:58.839Z" itemprop="datePublished">2017-11-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      js的number的数据处理（取位）
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一-取整"><a href="#一-取整" class="headerlink" title="一.取整"></a>一.取整</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//toFixed() 方法可把 Number 四舍五入为指定小数位数的数字</span></div><div class="line">NumberObject.toFixed(num)<span class="comment">//num必需。规定小数的位数，是 0 ~ 20 之间的值，包括 0 和 20，有些实现可以支持更大的数值范围。如果省略了该参数，将用 0 代替。</span></div><div class="line">(<span class="number">14.24</span>).toFixed(<span class="number">1</span>)<span class="comment">//14.2,14.24.toFixed(1)也是可以的，但是为了友好度，看的舒服，还是加上圆括号吧</span></div><div class="line"></div><div class="line"><span class="built_in">parseInt</span>(<span class="number">5</span>/<span class="number">2</span>)<span class="comment">//2//丢弃小数部分,保留整数部分</span></div><div class="line"></div><div class="line"><span class="built_in">Math</span>.ceil(<span class="number">5</span>/<span class="number">2</span>)<span class="comment">//3//向上取整,有小数就整数部分加1</span></div><div class="line">.</div><div class="line"><span class="built_in">Math</span>.round(<span class="number">5</span>/<span class="number">2</span>)<span class="comment">//3//四舍五入</span></div><div class="line"><span class="built_in">Math</span>.round(<span class="number">2.4</span>)<span class="comment">//2</span></div><div class="line"></div><div class="line"><span class="built_in">Math</span>.floor(<span class="number">5</span>/<span class="number">2</span>)<span class="comment">//2//向下取整</span></div></pre></td></tr></table></figure>
+<p>Math是一个类，继承与Object,所以用Math的方法必须带上类名Math<br>所以的number数据都是number的一个实例，是可以直接调用Number的方法的<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number" target="_blank" rel="external">关于Number的更多方法</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math" target="_blank" rel="external">关于Math的更多方法</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/03/js的number的数据处理/" data-id="cj9jmlrrh0002b4qsn563miuc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/03/js高阶函数/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          map,filter.reduce的区别
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/03/常见的排序方法/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">常见的排序方法</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/03/用码云挂载页面/">用码云挂载页面</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/03/js高阶函数/">map,filter.reduce的区别</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/03/js的number的数据处理/">js的number的数据处理（取位）</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/03/常见的排序方法/">常见的排序方法</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/03/数组降维/">数组降维</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
