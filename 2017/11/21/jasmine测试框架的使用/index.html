@@ -8,7 +8,7 @@
   <meta name="description" content="写这个其实一点底没有，自己也是一知半解，如果有什么错误，请指出，QQ:839187405(后期可能会完善) 一·介绍Jasmine就是一种JavaScript单元测试框架，它不依赖任何其他JS框架，也不需要对DOM操作，具有灵巧而明确的语法可以让你轻松的编写测试代码。它是一套Javascript行为驱动开发框架（BDD），干净简洁，表达力强且易于组织，不依赖于其他任何框架和DOM，可运行于Node">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jasmine测试框架的使用">
-<meta property="og:url" content="http://seveneyes.top/2017/11/21/jasmine测试框架的使用/index.html">
+<meta property="og:url" content="seveneyes.top/2017/11/21/jasmine测试框架的使用/index.html">
 <meta property="og:site_name" content="S.E.">
 <meta property="og:description" content="写这个其实一点底没有，自己也是一知半解，如果有什么错误，请指出，QQ:839187405(后期可能会完善) 一·介绍Jasmine就是一种JavaScript单元测试框架，它不依赖任何其他JS框架，也不需要对DOM操作，具有灵巧而明确的语法可以让你轻松的编写测试代码。它是一套Javascript行为驱动开发框架（BDD），干净简洁，表达力强且易于组织，不依赖于其他任何框架和DOM，可运行于Node">
 <meta property="og:image" content="http://ow47touqj.bkt.clouddn.com/%E6%B5%8B%E8%AF%95%E6%95%99%E7%A8%8B%E5%9B%BE%E7%89%871.png">
@@ -16,7 +16,7 @@
 <meta property="og:image" content="http://ow47touqj.bkt.clouddn.com/%E6%B5%8B%E8%AF%95%E6%95%99%E7%A8%8B%E5%9B%BE%E7%89%872.png">
 <meta property="og:image" content="http://ow47touqj.bkt.clouddn.com/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87%E6%95%99%E7%A8%8B4.png">
 <meta property="og:image" content="http://ow47touqj.bkt.clouddn.com/%E6%B5%8B%E8%AF%95%E6%95%99%E7%A8%8B5.png">
-<meta property="og:updated_time" content="2017-11-21T15:29:01.644Z">
+<meta property="og:updated_time" content="2017-11-21T16:08:01.450Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jasmine测试框架的使用">
 <meta name="twitter:description" content="写这个其实一点底没有，自己也是一知半解，如果有什么错误，请指出，QQ:839187405(后期可能会完善) 一·介绍Jasmine就是一种JavaScript单元测试框架，它不依赖任何其他JS框架，也不需要对DOM操作，具有灵巧而明确的语法可以让你轻松的编写测试代码。它是一套Javascript行为驱动开发框架（BDD），干净简洁，表达力强且易于组织，不依赖于其他任何框架和DOM，可运行于Node">
@@ -62,12 +62,12 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://seveneyes.top"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="seveneyes.top"></form>
       </div>
     </div>
   </div>
@@ -108,13 +108,13 @@
 <h2 id="三·初始化"><a href="#三·初始化" class="headerlink" title="三·初始化"></a>三·初始化</h2><p>然后你需要执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jasmine init</div></pre></td></tr></table></figure></p>
 <p>这一步会生出spec文件夹，里面有一个support，support里面有一个jasmine.json文件,这个好像可以使你找到测试文件<br>基本上我们会在这个spec里面写测试文件。我也不知道放在外面有什么情况发生。。。估计没什么事<br>如图：<br><img src="http://ow47touqj.bkt.clouddn.com/%E6%B5%8B%E8%AF%95%E6%95%99%E7%A8%8B%E5%9B%BE%E7%89%873.png" alt="麒麟出品"><br>到这里其实你就可以跑测试了，当然你还没写测试文件的话肯定是不行的。<br>只需要执行下面的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jasmine</div></pre></td></tr></table></figure></p>
 <h2 id="四·测试"><a href="#四·测试" class="headerlink" title="四·测试"></a>四·测试</h2><p>看到这里，你是不是会疑惑为什么和你以前测试的命令不一样，不要着急，马上就可以一样了<br>你需要执行下面这条命令，来生成全局的package.json文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm init -y</div></pre></td></tr></table></figure></p>
-<p>这里的-y ，会自动生成你需要填写的东西（当然你也可以不加 -y,可以试试是什么结果）<br><img src="http://ow47touqj.bkt.clouddn.com/%E6%B5%8B%E8%AF%95%E6%95%99%E7%A8%8B%E5%9B%BE%E7%89%872.png" alt="麒麟出品"><br>到这里还没完，你需点开package.json文件，把里面的 “scripts”: {  “test”: <code>&quot;jasmine &amp;&amp; exit 1&quot;</code>},替换成红色的部分<br>如下图：<br><img src="http://ow47touqj.bkt.clouddn.com/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87%E6%95%99%E7%A8%8B4.png" alt="麒麟出品"><br>接下来你就可以愉快的用 npm test 跑测试了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm test</div></pre></td></tr></table></figure></p>
+<p>这里的-y ，会自动生成你需要填写的东西（当然你也可以不加 -y,可以试试是什么结果）<br><img src="http://ow47touqj.bkt.clouddn.com/%E6%B5%8B%E8%AF%95%E6%95%99%E7%A8%8B%E5%9B%BE%E7%89%872.png" alt="麒麟出品"><br>到这里还没完，你需点开package.json文件，把里面的 “scripts”: {  “test”: <code>&quot;jasmine &amp;&amp; exit 1&quot;</code>},替换成灰底的部分<br>如下图：<br><img src="http://ow47touqj.bkt.clouddn.com/%E6%B5%8B%E8%AF%95%E5%9B%BE%E7%89%87%E6%95%99%E7%A8%8B4.png" alt="麒麟出品"><br>接下来你就可以愉快的用 npm test 跑测试了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm test</div></pre></td></tr></table></figure></p>
 <p><img src="http://ow47touqj.bkt.clouddn.com/%E6%B5%8B%E8%AF%95%E6%95%99%E7%A8%8B5.png" alt="麒麟出品"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://seveneyes.top/2017/11/21/jasmine测试框架的使用/" data-id="cja9s5c1l0001ngqs7a8r6im1" class="article-share-link">Partager</a>
+      <a data-url="seveneyes.top/2017/11/21/jasmine测试框架的使用/" data-id="cja9te0uk0001l0qsrd1jz4xc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -125,7 +125,7 @@
   
   
     <a href="/2017/11/03/用码云挂载页面/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">用码云挂载页面</div>
     </a>
   
@@ -148,7 +148,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Arkiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
     </div>
@@ -158,7 +158,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Siste innlegg</h3>
     <div class="widget">
       <ul>
         
@@ -195,7 +195,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 SevenEyes<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
